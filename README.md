@@ -62,6 +62,10 @@ df.columns
 ```py
 print(df.isnull().sum())
 ```
+### CHECK FOR DUPLICATES:
+```py
+df.duplicated()
+```
 ### ASSIGNING X:
 ```py
 X = df.iloc[:, :-1].values
