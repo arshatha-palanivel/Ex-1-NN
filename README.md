@@ -1,16 +1,16 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+![0901](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/c3a39e8e-5bce-4822-b764-4511b0c2e8b8)![0902](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/a4b3f988-a7bb-4b68-97a5-1f8f62d7b125)![0902](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/2d21f4e5-b744-4978-831c-11dd255f2091)<H3>ENTER YOUR NAME:ARSHATHA P</H3>
+<H3>ENTER YOUR REGISTER NO: 212222230012</H3>
 <H3>EX. NO.1</H3>
-<H3>DATE</H3>
+<H3>DATE: 24/2/24</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
 
-To perform Data preprocessing in a data set downloaded from Kaggle
+To perform Data preprocessing in a data set downloaded from Kaggle.
 
 ## EQUIPMENTS REQUIRED:
-Hardware – PCs
-Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook
+Hardware – PCs.
+Anaconda – Python 3.7 Installation / Google Colab /Jupiter Notebook.
 
 ## RELATED THEORETICAL CONCEPT:
 
@@ -37,11 +37,111 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
-
+IMPORT LIBRARIES :
+```py
+#import libraries
+from google.colab import files
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+```
+READ THE DATA:
+```py
+df = pd.read_csv('Churn_Modelling.csv')
+print(df)
+```
+CHECK DATA:
+```py
+df.head()
+df.tail()
+df.columns
+```
+CHECK THE MISSING DATA:
+```py
+print(df.isnull().sum())
+```
+ASSIGNING X:
+```py
+X = df.iloc[:, :-1].values
+print(X)
+```
+ASSIGNING Y:
+```py
+y = df.iloc[:, :-1].values
+print(y)
+```
+HANDLING MISSING VALUES:
+```py
+df.fillna(df.mean().round(1), inplace=True)
+print(df.isnull().sum())
+```
+CHECK FOR OUTLIERS:
+```py
+df.describe()
+```
+DROPPING STRING VALUES DATA FROM DATASET: & CHECKING DATASETS AFTER DROPPING STRING VALUES DATA FROM DATASET:
+```py
+df1 = df.drop(['Surname','Geography','Gender'],axis=1)
+df1.head()
+```
+NORMALIE THE DATASET USING (MinMax Scaler):
+```py
+scaler = MinMaxScaler()
+df2 = pd.DataFrame(scaler.fit_transform(df1))
+print(df2)
+```
+SPLIT THE DATASET:
+```py
+X = df.iloc[:, :-1].values
+print(X)
+y = df.iloc[:, :-1].values
+print(y)
+```
+TRAINING AND TESTING MODEL:
+```py
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+print(X_train)
+print("Length of X_train:",len(X_train))
+print(X_test)
+print("Length of X_test:",len(X_test))
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+### DATA CHECKING:
+![01](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/56925ffd-7b99-4809-9236-caffca8c39eb)
+
+### MISSING DATA:
+![02](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/e3362ea8-bc16-4f3a-b8f8-6b8a232dfddd)
+
+### DUPLICATES IDENTIFICATION:
+![03](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/e0c737dd-e87b-48ed-a33c-0cec8862443f)
+
+### VALUE OF Y:
+![04](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/51d5f62c-d427-49bd-bd95-d8ff7720bab4)
+
+### OUTLIERS:
+![05](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/7c97874e-5c9c-4e59-9e24-086c0e2b152c)
+
+### CHECKING DATASET AFTER DROPPING STRING VALUES DATA FROM DATASET:
+![06](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/1e7ed9f5-9bae-4e7b-8a7b-e496c89b7209)
+
+### NORMALIZE THE DATASET:
+![07](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/26cd8369-d209-4ceb-bd4c-ee169fda165b)
+
+### SPLIT THE DATASET:
+![08](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/13b4b35d-6267-4833-bef4-ccea5150d18a)
+
+### TRAINING AND TESTING MODEL:
+![0901](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/aa0e8539-3509-4a85-96c3-d209b2da9027)
+![0902](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/925b72d8-a880-4ae3-a5a6-fc919b304c5a)
+![0903](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/f215f7ae-4530-4d32-bc9c-d543549bbf37)
+![0904](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/be128f2d-fb10-4060-bf09-403763ff8015)
+
+
+
+
+
 
 
 ## RESULT:
