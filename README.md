@@ -73,7 +73,7 @@ print(X)
 ```
 ### ASSIGNING Y:
 ```py
-y = df.iloc[:, -1].values
+y = df.iloc[:,-1].values
 print(y)
 ```
 ### HANDLING MISSING VALUES:
@@ -100,7 +100,7 @@ print(df2)
 ```py
 X = df.iloc[:, :-1].values
 print(X)
-y = df.iloc[:, :-1].values
+y = df.iloc[:,-1].values
 print(y)
 ```
 ### TRAINING AND TESTING MODEL:
