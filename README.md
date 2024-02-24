@@ -1,4 +1,3 @@
-![0901](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/c3a39e8e-5bce-4822-b764-4511b0c2e8b8)![0902](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/a4b3f988-a7bb-4b68-97a5-1f8f62d7b125)![0902](https://github.com/arshatha-palanivel/Ex-1-NN/assets/118682484/2d21f4e5-b744-4978-831c-11dd255f2091)<H3>ENTER YOUR NAME:ARSHATHA P</H3>
 <H3>ENTER YOUR REGISTER NO: 212222230012</H3>
 <H3>EX. NO.1</H3>
 <H3>DATE: 24/2/24</H3>
